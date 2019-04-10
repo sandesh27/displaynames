@@ -1,0 +1,31 @@
+<h2>Select welcome message language</h2>
+<form [formGroup]="namesForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div>Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="language">Language</label>
+        <select name="language" id="langauge" formControlName="language" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.language.errors }" >
+            <option value="">-- Select --</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="it">Italian</option>
+            <option value="sp">Spanish</option>
+            <option value="gr">German</option>
+        </select>
+        <div *ngIf="submitted && f.langauge && f.langauge.errors" class="invalid-feedback">
+            <div>Language is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Send</button>
+        <a routerLink="/test" class="btn btn-link">Test Page</a>
+    </div>
+    <div *ngIf="isShowMessage && message">
+        {{ message }}
+    </div>
+</form>
