@@ -1,5 +1,5 @@
 # displaynames
-This is demo POC app using angular 6
+This is demo POC app using angular 7
 Installation steps:
 1. ```npm install```
 2. ```npm start```
