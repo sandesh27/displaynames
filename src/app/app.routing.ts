@@ -1,6 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
+// import { AppComponent } from './app.component';
 import { NamesComponent } from './names';
 import { TestComponent } from './test';
+
 
 const appRoutes: Routes = [
     { path: '', component: NamesComponent },  
